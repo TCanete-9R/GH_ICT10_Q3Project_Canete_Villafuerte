@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Seatwork 2</title>
+</head>
+<body>
+    <div class="container border p-4 mt-5" style="max-width: 500px;">
+        <form onsubmit="return false;">
+            <h2 class="text-center">𝙄𝙣𝙩𝙧𝙖𝙢𝙪𝙧𝙖𝙡𝙨 𝙍𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣</h2>
+
+            <div class="mb-3">
+                <label class="form-label d-block">𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛𝚎𝚍 𝙾𝚗𝚕𝚒𝚗𝚎?</label>
+                <input type="radio" name="registration" value="yes" id="r1"> <label for="r1">𝚈𝚎𝚜</label>
+                <input type="radio" name="registration" value="no" id="r2"> <label for="r2">𝙽𝚘</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label d-block">𝙼𝚎𝚍𝚒𝚌𝚊𝚕 𝙲𝚕𝚎𝚊𝚛𝚊𝚗𝚌𝚎?</label>
+                <input type="radio" name="medical" value="yes" id="m1"> <label for="m1">𝚈𝚎𝚜</label>
+                <input type="radio" name="medical" value="no" id="m2"> <label for="m2">𝙽𝚘</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="grade_level" class="form-label">𝓖𝓻𝓪𝓭𝓮 𝓛𝓮𝓿𝓮𝓵 (7-10):</label>
+                <input type="number" id="grade_level" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="section" class="form-label">Section:</label>
+                <select id="section" class="form-select">
+                    <option value="">-- ꜱᴇʟᴇᴄᴛ ꜱᴇᴄᴛɪᴏɴ --</option>
+                    <option value="Emerald">𝙴𝚖𝚎𝚛𝚊𝚕𝚍</option>
+                    <option value="Ruby">𝚁𝚞𝚋𝚢</option>
+                    <option value="Sapphire">𝚂𝚊𝚙𝚙𝚑𝚒𝚛𝚎</option>
+                    <option value="Diamond">𝚃𝚘𝚙𝚊𝚣</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary w-100" py-click="check_eligibility">ℂℍ𝔼ℂ𝕂</button>
+        </form>
+
+        <div id="output" class="mt-4 p-3 border bg-light text-center"></div>
+        <div id="image_container" class="mt-2 text-center"></div>
+    </div>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
