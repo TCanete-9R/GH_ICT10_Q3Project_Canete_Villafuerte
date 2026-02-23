@@ -52,8 +52,21 @@ def check_eligibility(e):
             9: "Yellow Tigers",
             10: "Blue Bears"
         }
-        display(f"Congratulations! You are part of the {teams[grade]}.",
-                target='output', append=False)
+        
+        images = {
+            7: "https://image2url.com/r2/default/images/1771857704372-0d6456f3-d345-4d4f-a694-8e4cbee631c8.jpg",
+            8: "https://image2url.com/r2/default/images/1771857684992-a4d3ac12-bdd7-4931-a2d0-8b04a411577d.jpg",
+            9: "https://image2url.com/r2/default/images/1771857649943-38c4ecca-1b26-4dd7-90fb-19aa606566d0.jpg",
+            10: "https://image2url.com/r2/default/images/1771857556522-bbc19453-cb69-403c-9194-81e76fa39dda.jpg"
+        }
+
+        team_name = teams[grade]
+        team_img = images[grade]
+
+        result = f"Congratulations! You are part of the {team_name}. <br><br> <img src='{team_img}' width='200'>"
+        
+        display(HTML(result), target='output', append=False)
+        
     else:
         display("Intramurals are only for Grades 7-10.",
                 target='output', append=False)
