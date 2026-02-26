@@ -16,7 +16,7 @@ def show_players(e):
     document.getElementById("players_section").style.display = "block"
 
 def create_account(e):
-   username = document.getElementById("new_username").value
+    username = document.getElementById("new_username").value
     password = document.getElementById("new_password").value
 
     if not username or not password:
