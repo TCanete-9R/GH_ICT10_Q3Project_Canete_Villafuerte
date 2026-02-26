@@ -1,4 +1,4 @@
-from pyscript import display, document
+from pyscript import display, document, HTML
 
 def show_signup(e):
     document.getElementById("signup_section").style.display = "block"
