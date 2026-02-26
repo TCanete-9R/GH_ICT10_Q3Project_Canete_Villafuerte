@@ -16,14 +16,26 @@ def show_players(e):
     document.getElementById("players_section").style.display = "block"
 
 def create_account(e):
-    username = document.getElementById("new_username").value
-    password = document.getElementById("new_password").value
+        username = document.getElementById("user_box").value
+    password = document.getElementById("pass_box").value
 
-    if not username or not password:
-        display("Please fill in all fields.", target="signup_output", append=False)
+
+    if len(username) < 7:
+        result = "Username must be at least 7 characters."
+    
+    elif len(password) < 10:
+        result = "Password must be at least 10 characters."
+    
+    elif password.isdigit():
+        result = "Password must contain at least one letter."
+    
+    elif password.isalpha():
+        result = "Password must contain at least one number."
+    
     else:
-        display("Account created. You may now log in using your credentials.",
-                target="signup_output", append=False)
+        result = "Account Created!( っ'-')╮ =͟͟͞͞🏀"
+
+    display(f"{result}", target="signup_output")
 
 def check_eligibility(e):
     reg = document.querySelector('input[name="registration"]:checked')
